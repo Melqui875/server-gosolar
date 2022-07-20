@@ -113,7 +113,7 @@ app.post('/sendemail', (req, res) =>{
 
 
 app.listen(PORT, () =>{
-    console.log("App is listening on PORT http://localhost:3000")
+    console.log("App is listening on PORT ", PORT)
 })
 
 async function sendEmail(paths){
