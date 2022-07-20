@@ -22,7 +22,7 @@ const app = express();
 app.use(express.static(path.join(__dirname + 'public/uploads')))
 
 app.get('/', (req, res) =>{
-    res.sendFile(__dirname + "/index.html")
+    res.send('Esperando un email...');
 });
  app.use(express.urlencoded({extended: false}));
 let paths = []
