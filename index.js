@@ -34,7 +34,7 @@ app.post('/sendemail', (req, res) =>{
             return
         }else{
             console.log(req.body);
-            const { cliente, ide, tamano, precio, correo, nombre} = req.body;
+            test = { cliente, ide, tamano, precio, correo, nombre} = req.body;
             contentHTML = `
             <table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;">
             <tbody>
@@ -124,18 +124,18 @@ async function sendEmail(paths){
             port: 465,
             secure: true,
             auth: {
-            user: 'zelayajeremy875@gmail.com',
-            pass: 'rhpanyenmczbngzn',
+            user: 'zoho@gosolar.co.cr',
+            pass: 'ztqkzgoxbxrjjhtt',
             },
         });
 
 
         const mailOptions = {
-            from: '"📧Solicitud de crédito📧"<zelayajeremy875@gmail.com>',
-            to: 'zelayajeremy874@gmail.com',
+            from: '"📧Solicitud de crédito📧"',
+            to: test.correo,
             html: contentHTML,
             subject: 'Solicitud de Crédito',
-            cc: "zelayajeremy875@gmail.com,zelayajeremy873@gmail.com",
+            cc: "jartaviag.consultoria@gmail.com,achabria1@gmail.com,ejimenez@gosolar.co.cr,kaguero@gosolar.co.cr",
             attachments: paths
         };
 
