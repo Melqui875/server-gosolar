@@ -134,7 +134,7 @@ async function sendEmail(paths){
             to: test.correo,
             html: contentHTML,
             subject: 'Solicitud de Crédito',
-            cc: "jartaviag.consultoria@gmail.com,achabria1@gmail.com,ejimenez@gosolar.co.cr,kaguero@gosolar.co.cr",
+            cc: "jartaviag.consultoria@gmail.com,achabria1@gmail.com,ejimenez@gosolar.co.cr,kaguero@gosolar.co.cr,fmendez@gosolar.co.cr",
             attachments: paths
         };
 
