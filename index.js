@@ -33,7 +33,7 @@ app.post('/sendemail', (req, res) =>{
             console.log("Error in uploading files")
             return
         }else{
-            res.sendFile(path.join(__dirname, '/carga.html'));
+    
             test = { cliente, ide, tamano, precio, correo, nombre} = req.body;
             contentHTML = `
             <table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;">
@@ -96,8 +96,8 @@ app.post('/sendemail', (req, res) =>{
                     path: file.path
                 })
             });
-            console.log(paths)
-            res.sendFile(path.join(__dirname, '/cargado.html'));
+            res.sendFile(path.join(__dirname, '/carga.html'));
+
             sendEmail(paths)
                 .then((result) =>{
                     console.log('Email is sent' + result)
