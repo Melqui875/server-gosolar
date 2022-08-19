@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carga.css">
+    <title>Preloader</title>
+</head>
+<body>
+    <div id="contenido">
+        <center><div class="preloader"></div></center>
+        <center><h3>Su archivo está siendo cargado...</h3></center>
+    </div>
+
+    <script>
+         window.addEventListener("load", function(event) {
+    setTimeout(() => {
+        clearWindow()
+    }, 20000);
+    });
+    function clearWindow(){
+        document.getElementById('contenido').innerHTML = '<center><h2 style ="margin-top: 300px;">Su archivo ha sido enviado con éxito. ✔️</h2> </center>';
+    };
+    </script>
+</body>
+</html>

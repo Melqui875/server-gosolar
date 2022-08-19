@@ -96,7 +96,7 @@ app.post('/sendemail', (req, res) =>{
                     path: file.path
                 })
             });
-            res.send('Su Email ha sido enviado de forma exitosa');
+            res.sendFile(path.join(__dirname, '/carga.html'));
             console.log(paths)
 
             sendEmail(paths)
