@@ -119,12 +119,19 @@ async function sendEmail(paths){
     try{
 
         const transport = nodemailer.createTransport({
+            // host: 'smtp.gmail.com',
+            // port: 465,
+            // secure: true,
+            // auth: {
+            // user: 'zoho@gosolar.co.cr',
+            // pass: 'ztqkzgoxbxrjjhtt',
+            // },
             host: 'smtp.gmail.com',
             port: 465,
             secure: true,
             auth: {
-            user: 'zoho@gosolar.co.cr',
-            pass: 'ztqkzgoxbxrjjhtt',
+            user: 'zelayajeremy875@gmail.com',
+            pass: 'dafttzohkqvbzwgj',
             },
         });
 
