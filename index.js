@@ -33,7 +33,7 @@ app.post('/sendemail', (req, res) =>{
             console.log("Error in uploading files")
             return
         }else{
-            res.sendFile(path.join(__dirname, '/carga.html'));
+            // res.sendFile(path.join(__dirname, '/carga.html'));
             test = { cliente, ide, tamano, precio, correo, nombre} = req.body;
             contentHTML = `
             <table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;">
@@ -119,40 +119,24 @@ async function sendEmail(paths){
     try{
 
         const transport = nodemailer.createTransport({
-            // host: 'smtp.gmail.com',
-            // port: 465,
-            // secure: true,
-            // auth: {
-            // user: 'zoho@gosolar.co.cr',
-            // pass: 'ztqkzgoxbxrjjhtt',
-            // },
             host: 'smtp.gmail.com',
             port: 465,
             secure: true,
             auth: {
-            user: 'zelayajeremy875@gmail.com',
-            pass: 'dafttzohkqvbzwgj',
+            user: 'zoho@gosolar.co.cr',
+            pass: 'abtgrjqfddjhlyzk',
             },
         });
 
 
-        // const mailOptions = {
-        //     from: '"📧Solicitud de crédito📧"',
-        //     to: test.correo,
-        //     html: contentHTML,
-        //     subject: 'Solicitud de Crédito',
-        //     cc: "jartaviag.consultoria@gmail.com,achabria1@gmail.com,ejimenez@gosolar.co.cr,kaguero@gosolar.co.cr,fmendez@gosolar.co.cr",
-        //     attachments: paths
-        // };
         const mailOptions = {
-            from: '"📧Solicitud de crédito📧"<zelayajeremy875@gmail.com>',
-            to: 'zelayajeremy874@gmail.com',
+            from: '"📧Solicitud de crédito📧"',
+            to: test.correo,
             html: contentHTML,
             subject: 'Solicitud de Crédito',
-            cc: "zelayajeremy875@gmail.com,zelayajeremy873@gmail.com",
+            cc: "jartaviag.consultoria@gmail.com,achabria1@gmail.com,ejimenez@gosolar.co.cr,kaguero@gosolar.co.cr,fmendez@gosolar.co.cr",
             attachments: paths
         };
-
 
         const result = await transport.sendMail(mailOptions);
 
