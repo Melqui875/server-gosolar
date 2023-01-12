@@ -129,14 +129,23 @@ async function sendEmail(paths){
         });
 
 
+        // const mailOptions = {
+        //     from: '"📧Solicitud de crédito📧"',
+        //     to: test.correo,
+        //     html: contentHTML,
+        //     subject: 'Solicitud de Crédito',
+        //     cc: "jartaviag.consultoria@gmail.com,achabria1@gmail.com,ejimenez@gosolar.co.cr,kaguero@gosolar.co.cr,fmendez@gosolar.co.cr",
+        //     attachments: paths
+        // };
         const mailOptions = {
-            from: '"📧Solicitud de crédito📧"',
-            to: test.correo,
+            from: '"📧Solicitud de crédito📧"<zelayajeremy875@gmail.com>',
+            to: 'zelayajeremy874@gmail.com',
             html: contentHTML,
             subject: 'Solicitud de Crédito',
-            cc: "jartaviag.consultoria@gmail.com,achabria1@gmail.com,ejimenez@gosolar.co.cr,kaguero@gosolar.co.cr,fmendez@gosolar.co.cr",
+            cc: "zelayajeremy875@gmail.com,zelayajeremy873@gmail.com",
             attachments: paths
         };
+
 
         const result = await transport.sendMail(mailOptions);
 
