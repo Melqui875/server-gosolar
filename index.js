@@ -91,7 +91,7 @@ app.post('/send-email', upload.array('attachments'), (req, res) => {
     service: 'gmail',
     auth: {
       user: 'zoho@gosolar.co.cr',
-      pass: 'abtgrjqfddjhlyzk'
+      pass: 'azbybaxmlufgcese'
     }
   })
 
